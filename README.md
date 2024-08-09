@@ -442,6 +442,33 @@ systemctl enable grafana-server
 systemctl start grafana-server
 ```
 
+***Go to  Grafana http://ip_of_vm:3000***
+![plot](./images/login_grafana_1.png)
+
+***Redefine default creds***
+![plot](./images/login_grafana_2.png)
+![plot](./images/adding_datasource_1.png)
+![plot](./images/adding_datasource_2.png)
+![plot](./images/adding_datasource_3.png)
+![plot](./images/adding_datasource_4.png)
+
+***Next we adding Dashboards:***
+
+> https://3338746466-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-La-SRWxzIGdy_3ynMZH%2F-M5bL5TswT1gk8MLgfTb%2F-M5bLwIZdA6CfbX1Q1mP%2FNETCAP-1587637598999.json?alt=media&token=60f98947-3f4a-4333-91b9-208e4a2f8583
+
+> https://github.com/nginxinc/nginx-prometheus-exporter/blob/main/grafana/dashboard.json
+
+> https://github.com/esnet/zeek-exporter/blob/master/prometheus/dashboard.json
+
+![plot](./images/adding_dashboards_1.png)
+![plot](./images/adding_dashboards_2.png)
+![plot](./images/adding_dashboards_3.png)
+![plot](./images/adding_dashboards_4.png)
+
+We will get smthing like this
+![plot](./images/dashboards_1.png)
+![plot](./images/dashboards_2.png)
+
 
 #### Run tests 
 
