@@ -10,7 +10,7 @@ Requirements:
 #### Install Nginx
 
 ```shell
-su
+sudo su
 ```
 
 ```shell
