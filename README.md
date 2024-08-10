@@ -447,6 +447,8 @@ systemctl start grafana-server
 
 ***Redefine default creds***
 ![plot](./images/login_grafana_2.png)
+
+***Adding new datasource***
 ![plot](./images/adding_datasource_1.png)
 ![plot](./images/adding_datasource_2.png)
 ![plot](./images/adding_datasource_3.png)
