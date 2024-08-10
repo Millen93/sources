@@ -454,7 +454,7 @@ systemctl start grafana-server
 ![plot](./images/adding_datasource_3.png)
 ![plot](./images/adding_datasource_4.png)
 
-***Next we adding Dashboards:***
+***Next we are adding Dashboards:***
 
 > https://3338746466-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-La-SRWxzIGdy_3ynMZH%2F-M5bL5TswT1gk8MLgfTb%2F-M5bLwIZdA6CfbX1Q1mP%2FNETCAP-1587637598999.json?alt=media&token=60f98947-3f4a-4333-91b9-208e4a2f8583
 
