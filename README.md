@@ -11,6 +11,9 @@ Requirements:
 
 ```shell
 sudo su
+wget https://raw.githubusercontent.com/Millen93/Nginx-Monitoring/main/validate.sh
+chmod +x validate.sh
+mv validate.sh /bin/
 ```
 
 ```shell
@@ -86,6 +89,8 @@ wget https://raw.githubusercontent.com/Millen93/sources/main/index.html -O /opt/
 
 systemctl enable nginx
 systemctl restart nginx
+
+validate.sh --nginx
 ```
 
 #### Install nginx-prometheus-exporter
@@ -123,6 +128,8 @@ systemctl enable nginx_exporter.socket
 systemctl enable nginx_exporter.service  
 systemctl start nginx_exporter.socket  
 systemctl start nginx_exporter.service
+
+validate.sh --nginx_exporter
 ```
 
 #### Install Zeek 
@@ -179,7 +186,7 @@ systemctl daemon-reload
 systemctl enable zeek
 systemctl start zeek
 
-validate
+validate.sh --zeek
 ```
 
 
@@ -291,6 +298,7 @@ systemctl enable prometheus
 systemctl start prometheus
 
 # if something gone wrong try to run rm -rf /var/lib/prometheus/*
+validate.sh --prometheus
 ```
 
 #### Install prometheus alertmanager
@@ -354,6 +362,8 @@ systemctl daemon-reload
 systemctl start alertmanager
 systemctl enable alertmanager
 systemctl status alertmanager
+
+validate.sh --alertmanager
 ```
 
 
@@ -364,6 +374,8 @@ curl -s https://packagecloud.io/install/repositories/faucetsdn/faucet/script.deb
 apt-get install grafana=11.1.0
 systemctl enable grafana-server
 systemctl start grafana-server
+
+validate.sh --grafana
 ```
 
 ***Go to  Grafana http://ip_of_vm:3000***
