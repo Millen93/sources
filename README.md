@@ -10,7 +10,18 @@ Requirements:
 #### Install Nginx
 
 ```shell
+#Never work on Production/Dev/Test by root User, use sudo from user:
+echo -e \
+"\033[4;33mNever work on Production/Dev/Test by root User, use sudo from sudouser\033[0;0m
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility."
+
 sudo su
+
 wget https://raw.githubusercontent.com/Millen93/Nginx-Monitoring/main/validate.sh
 chmod +x validate.sh
 mv validate.sh /bin/
