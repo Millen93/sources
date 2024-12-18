@@ -185,7 +185,7 @@ tee -a /etc/systemd/system/zeek.service << EOF
 Description=zeek network analysis engine
 [Service]
 Type=forking
-PIDFIle=/opt/zeek/spool/zeek/.pid
+PIDFile=/opt/zeek/spool/zeek/.pid
 Environment="BROKER_METRICS_PORT=4242"
 ExecStart=/opt/zeek/bin/zeekctl start
 ExecStop=/opt/zeek/bin/zeekctl stop
